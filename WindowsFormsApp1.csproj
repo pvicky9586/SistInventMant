@@ -98,9 +98,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Solicitar.resx">
       <DependentUpon>Solicitar.cs</DependentUpon>
@@ -129,6 +133,27 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Featured-Como-hacer-correctamente-un-inventario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brack2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brack2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
