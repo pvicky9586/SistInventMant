@@ -41,10 +41,14 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,16 +184,15 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Enabled = false;
-            this.label8.Location = new System.Drawing.Point(298, 314);
+            this.label8.Location = new System.Drawing.Point(392, 303);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(16, 13);
             this.label8.TabIndex = 18;
-            this.label8.Text = "label8";
+            this.label8.Text = ",,,";
             this.label8.Visible = false;
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Image = global::WindowsFormsApp1.Properties.Resources.impress;
             this.btnImprimir.Location = new System.Drawing.Point(476, 299);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(97, 42);
@@ -202,7 +205,6 @@
             // 
             this.btnBorrar.AutoEllipsis = true;
             this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnBorrar.Image = global::WindowsFormsApp1.Properties.Resources.delet;
             this.btnBorrar.Location = new System.Drawing.Point(4, 301);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 40);
@@ -213,7 +215,6 @@
             // 
             // btnClear
             // 
-            this.btnClear.Image = global::WindowsFormsApp1.Properties.Resources.clear;
             this.btnClear.Location = new System.Drawing.Point(85, 303);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 38);
@@ -222,10 +223,49 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Location = new System.Drawing.Point(474, 52);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(44, 21);
+            this.btnbuscar.TabIndex = 27;
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textBox5.Location = new System.Drawing.Point(355, 52);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 26;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(304, 56);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(39, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "código";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(205, 53);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 18);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "buscar por";
+            // 
             // Registro
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(610, 349);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.btnbuscar);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.label8);
@@ -283,5 +323,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnImprimir;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnbuscar;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

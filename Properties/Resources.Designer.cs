@@ -103,6 +103,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clear1 {
+            get {
+                object obj = ResourceManager.GetObject("clear1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delet {
             get {
                 object obj = ResourceManager.GetObject("delet", resourceCulture);
@@ -126,6 +136,26 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap impress {
             get {
                 object obj = ResourceManager.GetObject("impress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap impress1 {
+            get {
+                object obj = ResourceManager.GetObject("impress1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searh3 {
+            get {
+                object obj = ResourceManager.GetObject("searh3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

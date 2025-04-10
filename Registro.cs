@@ -35,8 +35,9 @@ namespace WindowsFormsApp1
 
         public void llena_tabla()
         {
+
             string consulta = "select * from almacen";
-            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conectar);
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conectar);            
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
             dataGridView2.DataSource = dt;
@@ -46,18 +47,14 @@ namespace WindowsFormsApp1
             dataGridView2.Columns[3].HeaderText = "CANTIDAD";
             dataGridView2.Columns[4].HeaderText = "DETALLES";
         }
-
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            textBox1.Text = dataGridView2.SelectedCells[1].Value.ToString(); //nombre
            textBox2.Text = dataGridView2.SelectedCells[2].Value.ToString(); //codigo
            textBox3.Text = dataGridView2.SelectedCells[3].Value.ToString(); //cantidad
            textBox4.Text = dataGridView2.SelectedCells[4].Value.ToString(); //descripcion
-
             label8.Text = dataGridView2.SelectedCells[0].Value.ToString();  // id
-
             //debo idicar la cantidad disponible y marcar stop
-
         }
 
         public void limpiar()
@@ -200,6 +197,19 @@ namespace WindowsFormsApp1
         private void Imprimir(object sender, PrintPageEventArgs e)
         {
 
+        }
+        private void buscar_Click(object sender, EventArgs e)
+        {
+            string consulta = "select * from almacen where codigo = '" + textBox3.Text + "'";
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conectar);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            dataGridView2.DataSource = dt;
+            dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[1].HeaderText = "NOMBRE";
+            dataGridView2.Columns[2].HeaderText = "CODIGO";
+            dataGridView2.Columns[3].HeaderText = "CANTIDAD";
+            dataGridView2.Columns[4].HeaderText = "DETALLES";
         }
     }
 }

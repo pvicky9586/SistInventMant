@@ -138,9 +138,6 @@
     <None Include="Resources\delet.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\clear.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\impress.png" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +151,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\brack2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searh3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impress1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
