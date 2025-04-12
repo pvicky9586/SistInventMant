@@ -151,7 +151,7 @@
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView2.Location = new System.Drawing.Point(185, 77);
+            this.dataGridView2.Location = new System.Drawing.Point(185, 83);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
@@ -225,26 +225,29 @@
             // 
             // btnbuscar
             // 
-            this.btnbuscar.Location = new System.Drawing.Point(474, 52);
+            this.btnbuscar.Image = global::WindowsFormsApp1.Properties.Resources.searh3;
+            this.btnbuscar.Location = new System.Drawing.Point(471, 42);
             this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(44, 21);
+            this.btnbuscar.Size = new System.Drawing.Size(44, 37);
             this.btnbuscar.TabIndex = 27;
             this.btnbuscar.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox5.Location = new System.Drawing.Point(355, 52);
+            this.textBox5.Location = new System.Drawing.Point(361, 43);
+            this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.Size = new System.Drawing.Size(100, 36);
             this.textBox5.TabIndex = 26;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(304, 56);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(304, 52);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 13);
+            this.label13.Size = new System.Drawing.Size(55, 16);
             this.label13.TabIndex = 28;
             this.label13.Text = "código";
             // 
@@ -252,7 +255,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(205, 53);
+            this.label14.Location = new System.Drawing.Point(204, 52);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(89, 18);
             this.label14.TabIndex = 29;
