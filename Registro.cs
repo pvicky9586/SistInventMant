@@ -211,5 +211,12 @@ namespace WindowsFormsApp1
             dataGridView2.Columns[3].HeaderText = "CANTIDAD";
             dataGridView2.Columns[4].HeaderText = "DETALLES";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ViewReporAlmacen reportAlm = new ViewReporAlmacen();
+            //this.Close();
+            reportAlm.ShowDialog();
+        }
     }
 }

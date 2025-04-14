@@ -37,5 +37,16 @@ namespace WindowsFormsApp1
             //this.Close();
             FormSolicitar.Show();
         }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Inventario FormInventario = new Inventario();
+            FormInventario.Show();
+        }
     }
 }
