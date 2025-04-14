@@ -36,24 +36,24 @@ namespace WindowsFormsApp1
         public void llena_tabla()
         {
 
-            string consulta = "select * from almacen";
+            string consulta = "select * from ExistAlmacen";
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conectar);            
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
             dataGridView2.DataSource = dt;
-            dataGridView2.Columns[0].Visible = false;
-            dataGridView2.Columns[1].HeaderText = "NOMBRE";
-            dataGridView2.Columns[2].HeaderText = "CODIGO";
+            dataGridView2.Columns[4].Visible = false;
+            dataGridView2.Columns[0].HeaderText = "NOMBRE";
+            dataGridView2.Columns[1].HeaderText = "CODIGO";
             dataGridView2.Columns[3].HeaderText = "CANTIDAD";
-            dataGridView2.Columns[4].HeaderText = "DETALLES";
+            dataGridView2.Columns[3].HeaderText = "DETALLES";
         }
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           textBox1.Text = dataGridView2.SelectedCells[1].Value.ToString(); //nombre
-           textBox2.Text = dataGridView2.SelectedCells[2].Value.ToString(); //codigo
-           textBox3.Text = dataGridView2.SelectedCells[3].Value.ToString(); //cantidad
-           textBox4.Text = dataGridView2.SelectedCells[4].Value.ToString(); //descripcion
-            label8.Text = dataGridView2.SelectedCells[0].Value.ToString();  // id
+           textBox1.Text = dataGridView2.SelectedCells[0].Value.ToString(); //nombre
+           textBox2.Text = dataGridView2.SelectedCells[1].Value.ToString(); //codigo 
+           textBox3.Text = dataGridView2.SelectedCells[2].Value.ToString(); //cantidad
+           textBox4.Text = dataGridView2.SelectedCells[3].Value.ToString(); //descripcion
+            label8.Text = dataGridView2.SelectedCells[4].Value.ToString();  // id
             //debo idicar la cantidad disponible y marcar stop
         }
 
@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
             conectar.Open();
             try
             {
-                string insertar = "INSERT INTO almacen(nombre,codigo,cantidadT,descripcion) " +
+                string insertar = "INSERT INTO ExistAlmacen(nombre,codigo,cantidadT,descripcion) " +
                     "VALUES('" + nombre + "','" + codigo + "'," + cantidad + ",'"+descripcion+"')";
                 SqlCommand comando = new SqlCommand(insertar, conectar);
                 comando.ExecuteNonQuery();
@@ -104,7 +104,7 @@ namespace WindowsFormsApp1
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             string nombre = textBox1.Text;
-            string codigo = textBox2.Text;
+           // string codigo = textBox2.Text;
             int cantidad = int.Parse(textBox3.Text);
             string descripcion = textBox4.Text;
             int id = int.Parse(label8.Text);
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
             try
             {
 
-                string updat = "UPDATE almacen SET nombre='" + nombre + "', codigo='" + codigo + "',cantidadT='" + cantidad + "',descripcion='" + descripcion + "'" +
+                string updat = "UPDATE ExistAlmacen SET nombre='" + nombre + "', cantidadT='" + cantidad + "',descripcion='" + descripcion + "'" +
                     " WHERE id='" + id + "'";
                 SqlCommand comando = new SqlCommand(updat, conectar);
                 comando.ExecuteNonQuery();
@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
             try
             {
 
-                string delet = "DELETE FROM almacen WHERE id= '" + label8.Text + "'";
+                string delet = "DELETE FROM ExistAlmacen WHERE id= '" + label8.Text + "'";
                 SqlCommand comando = new SqlCommand(delet, conectar);
                 comando.ExecuteNonQuery();
                 if (conectar.State == ConnectionState.Open)
@@ -186,35 +186,35 @@ namespace WindowsFormsApp1
 
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            printDocument1 = new PrintDocument();
-            PrinterSettings  ps = new PrinterSettings();
-            printDocument1.PrinterSettings = ps;
-            printDocument1.PrintPage += Imprimir;
-            printDocument1.Print();
-        }
+        //private void btnImprimir_Click(object sender, EventArgs e)
+        //{
+        //    printDocument1 = new PrintDocument();
+        //    PrinterSettings  ps = new PrinterSettings();
+        //    printDocument1.PrinterSettings = ps;
+        //    printDocument1.PrintPage += Imprimir;
+        //    printDocument1.Print();
+        //}
         private void Imprimir(object sender, PrintPageEventArgs e)
         {
 
         }
         private void buscar_Click(object sender, EventArgs e)
         {
-            string consulta = "select * from almacen where codigo = '" + textBox3.Text + "'";
+            string consulta = "select * from ExistAlmacen where codigo = '" + textBox3.Text + "'";
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conectar);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
             dataGridView2.DataSource = dt;
-            dataGridView2.Columns[0].Visible = false;
-            dataGridView2.Columns[1].HeaderText = "NOMBRE";
-            dataGridView2.Columns[2].HeaderText = "CODIGO";
-            dataGridView2.Columns[3].HeaderText = "CANTIDAD";
-            dataGridView2.Columns[4].HeaderText = "DETALLES";
+            dataGridView2.Columns[4].Visible = false;
+            dataGridView2.Columns[0].HeaderText = "NOMBRE";
+            dataGridView2.Columns[1].HeaderText = "CODIGO";
+            dataGridView2.Columns[2].HeaderText = "CANTIDAD";
+            dataGridView2.Columns[3].HeaderText = "DETALLES";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ViewReporAlmacen reportAlm = new ViewReporAlmacen();
+            VerReporte reportAlm = new VerReporte();
             //this.Close();
             reportAlm.ShowDialog();
         }

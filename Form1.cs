@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
 
         private void btnSolicitar_Click(object sender, EventArgs e)
         {
-            Solicitar FormSolicitar = new Solicitar();
+            Despachar FormSolicitar = new Despachar();
             //this.Close();
             FormSolicitar.Show();
         }
@@ -45,8 +45,13 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Inventario FormInventario = new Inventario();
+            VerInventario FormInventario = new VerInventario();
             FormInventario.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

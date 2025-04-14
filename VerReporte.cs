@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class ViewReporAlmacen : Form
+    public partial class VerReporte : Form
     {
-        public ViewReporAlmacen()
+        public VerReporte()
         {
             InitializeComponent();
         }
 
-        private void ViewReporAlmacen_Load(object sender, EventArgs e)
+        private void VerReporte_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSetAlmacen.almacen' Puede moverla o quitarla según sea necesario.
-            this.almacenTableAdapter.Fill(this.dataSetAlmacen.almacen);
+            // TODO: esta línea de código carga datos en la tabla 'dBDataSetAlmacen.ExistAlmacen' Puede moverla o quitarla según sea necesario.
+            this.existAlmacenTableAdapter.Fill(this.dBDataSetAlmacen.ExistAlmacen);
 
             this.reportViewer1.RefreshReport();
         }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class ViewReporAlmacen
+    partial class VerReporte
     {
         /// <summary>
         /// Required designer variable.
@@ -30,19 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerReporte));
+            this.existAlmacenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSetAlmacen = new WindowsFormsApp1.DBDataSetAlmacen();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetAlmacen = new WindowsFormsApp1.DataSetAlmacen();
-            this.almacenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.almacenTableAdapter = new WindowsFormsApp1.DataSetAlmacenTableAdapters.almacenTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetAlmacen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.almacenBindingSource)).BeginInit();
+            this.existAlmacenTableAdapter = new WindowsFormsApp1.DBDataSetAlmacenTableAdapters.ExistAlmacenTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.existAlmacenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetAlmacen)).BeginInit();
             this.SuspendLayout();
+            // 
+            // existAlmacenBindingSource
+            // 
+            this.existAlmacenBindingSource.DataMember = "ExistAlmacen";
+            this.existAlmacenBindingSource.DataSource = this.dBDataSetAlmacen;
+            // 
+            // dBDataSetAlmacen
+            // 
+            this.dBDataSetAlmacen.DataSetName = "DBDataSetAlmacen";
+            this.dBDataSetAlmacen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "ConjDatosDataSetAlmacen";
-            reportDataSource1.Value = this.almacenBindingSource;
+            reportDataSource1.Name = "CDDataSetAlmacen";
+            reportDataSource1.Value = this.existAlmacenBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp1.Reporte.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -51,31 +62,22 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dataSetAlmacen
+            // existAlmacenTableAdapter
             // 
-            this.dataSetAlmacen.DataSetName = "DataSetAlmacen";
-            this.dataSetAlmacen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.existAlmacenTableAdapter.ClearBeforeFill = true;
             // 
-            // almacenBindingSource
-            // 
-            this.almacenBindingSource.DataMember = "almacen";
-            this.almacenBindingSource.DataSource = this.dataSetAlmacen;
-            // 
-            // almacenTableAdapter
-            // 
-            this.almacenTableAdapter.ClearBeforeFill = true;
-            // 
-            // ViewReporAlmacen
+            // VerReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "ViewReporAlmacen";
-            this.Text = "ViewReporAlmacen";
-            this.Load += new System.EventHandler(this.ViewReporAlmacen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetAlmacen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.almacenBindingSource)).EndInit();
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "VerReporte";
+            this.Text = "INSUMOS";
+            this.Load += new System.EventHandler(this.VerReporte_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.existAlmacenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSetAlmacen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,8 +85,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private DataSetAlmacen dataSetAlmacen;
-        private System.Windows.Forms.BindingSource almacenBindingSource;
-        private DataSetAlmacenTableAdapters.almacenTableAdapter almacenTableAdapter;
+        private DBDataSetAlmacen dBDataSetAlmacen;
+        private System.Windows.Forms.BindingSource existAlmacenBindingSource;
+        private DBDataSetAlmacenTableAdapters.ExistAlmacenTableAdapter existAlmacenTableAdapter;
     }
 }

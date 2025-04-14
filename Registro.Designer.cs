@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnbuscar = new System.Windows.Forms.Button();
@@ -50,6 +50,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +81,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(4, 210);
+            this.label11.Location = new System.Drawing.Point(4, 217);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(137, 13);
             this.label11.TabIndex = 4;
@@ -116,14 +117,15 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(32, 5);
+            this.label12.Location = new System.Drawing.Point(63, 2);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(563, 39);
+            this.label12.Size = new System.Drawing.Size(431, 39);
             this.label12.TabIndex = 11;
-            this.label12.Text = "ALMACEN DE MANTENIMIENTO";
+            this.label12.Text = "CONTROL DE INSUMOS";
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.Location = new System.Drawing.Point(4, 270);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
@@ -134,6 +136,7 @@
             // 
             // btnActualizar
             // 
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.Location = new System.Drawing.Point(86, 271);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
@@ -164,7 +167,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(5, 224);
+            this.textBox4.Location = new System.Drawing.Point(5, 232);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(154, 31);
@@ -192,20 +195,12 @@
             this.label8.Text = ",,,";
             this.label8.Visible = false;
             // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Location = new System.Drawing.Point(476, 299);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(97, 42);
-            this.btnImprimir.TabIndex = 20;
-            this.btnImprimir.Text = "IMPRIMIR";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
             // btnBorrar
             // 
             this.btnBorrar.AutoEllipsis = true;
+            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBorrar.Image = global::WindowsFormsApp1.Properties.Resources.delet;
             this.btnBorrar.Location = new System.Drawing.Point(4, 301);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 40);
@@ -216,6 +211,8 @@
             // 
             // btnClear
             // 
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.Image = global::WindowsFormsApp1.Properties.Resources.clear1;
             this.btnClear.Location = new System.Drawing.Point(85, 303);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 38);
@@ -264,24 +261,36 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(307, 306);
+            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.impress1;
+            this.button2.Location = new System.Drawing.Point(490, 310);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 23);
+            this.button2.Size = new System.Drawing.Size(87, 35);
             this.button2.TabIndex = 30;
             this.button2.Text = "Ver Reporte";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label15.Location = new System.Drawing.Point(37, 206);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(119, 9);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Este valor no puede ser modicado";
+            // 
             // Registro
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(610, 349);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnClear);
@@ -297,7 +306,9 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registro";
+            this.Text = "Departamento de Servicios Generales";
             this.Load += new System.EventHandler(this.Registro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -336,12 +347,12 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label15;
     }
 }
