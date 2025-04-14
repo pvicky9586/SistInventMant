@@ -35,12 +35,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnSolicitar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -90,6 +90,16 @@
             this.groupBox1.Size = new System.Drawing.Size(223, 77);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(46, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(158, 15);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Bachiller: Botler Andrés";
             // 
             // button3
             // 
@@ -155,16 +165,6 @@
             this.label6.Size = new System.Drawing.Size(419, 24);
             this.label6.TabIndex = 10;
             this.label6.Text = "FACULTAD DE INGENIERIA INFORMÁTICA";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(46, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 15);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Bachiller: Botler Andrés";
             // 
             // label3
             // 
