@@ -172,15 +172,15 @@
             this.label3.Font = new System.Drawing.Font("Arial Black", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(154, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(497, 27);
+            this.label3.Size = new System.Drawing.Size(476, 27);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Control para INSUMOS en el departamento de ";
+            this.label3.Text = "Control de INSUMOS en el departamento de ";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Black", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label8.Location = new System.Drawing.Point(207, 123);
+            this.label8.Location = new System.Drawing.Point(187, 123);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(399, 27);
             this.label8.TabIndex = 13;
