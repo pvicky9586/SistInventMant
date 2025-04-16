@@ -95,7 +95,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(46, 38);
+            this.label7.Location = new System.Drawing.Point(28, 41);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(158, 15);
             this.label7.TabIndex = 11;
@@ -136,7 +136,7 @@
             // 
             this.button4.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.inventario1;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Ravie", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Maroon;
             this.button4.Location = new System.Drawing.Point(264, 339);
             this.button4.Name = "button4";
@@ -182,9 +182,9 @@
             this.label8.Font = new System.Drawing.Font("Arial Black", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label8.Location = new System.Drawing.Point(187, 123);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(399, 27);
+            this.label8.Size = new System.Drawing.Size(403, 27);
             this.label8.TabIndex = 13;
-            this.label8.Text = "mantenimiento y servicios generales";
+            this.label8.Text = "Mantenimiento y Servicios Generales";
             // 
             // Form1
             // 

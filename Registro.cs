@@ -54,6 +54,7 @@ namespace WindowsFormsApp1
            textBox3.Text = dataGridView2.SelectedCells[2].Value.ToString(); //cantidad
            textBox4.Text = dataGridView2.SelectedCells[3].Value.ToString(); //descripcion
             label8.Text = dataGridView2.SelectedCells[4].Value.ToString();  // id
+            btnNuevo.Enabled = false;
             //debo idicar la cantidad disponible y marcar stop
         }
 
@@ -64,6 +65,7 @@ namespace WindowsFormsApp1
             textBox3.Text = ""; //cantidad
             textBox4.Text = ""; // descripcion
             label8.Text = ""; //id oculto debajo de DataGridView
+            btnNuevo.Enabled = true;
 
         }
 
@@ -77,13 +79,26 @@ namespace WindowsFormsApp1
             conectar.Open();
             try
             {
-                string insertar = "INSERT INTO ExistAlmacen(nombre,codigo,cantidadT,descripcion) " +
-                    "VALUES('" + nombre + "','" + codigo + "'," + cantidad + ",'"+descripcion+"')";
-                SqlCommand comando = new SqlCommand(insertar, conectar);
-                comando.ExecuteNonQuery();
-                if (conectar.State == ConnectionState.Open)
+                           
+                string cadena = "SELECT codigo FROM ExistAlmacen  WHERE codigo='" + codigo + "'";
+                SqlCommand comando = new SqlCommand(cadena, conectar);
+                SqlDataReader registro = comando.ExecuteReader();
+                if (registro.Read())
                 {
-                    MessageBox.Show("Registro guardado con EXITO");
+                    MessageBox.Show("Insumo ya registrado");
+                    limpiar();                   
+                }
+                else
+                {
+                    registro.Close();
+                    string insertar = "INSERT INTO ExistAlmacen(nombre,codigo,cantidadT,descripcion) " +
+                    "VALUES('" + nombre + "','" + codigo + "'," + cantidad + ",'" + descripcion + "')";
+                    SqlCommand cmd = new SqlCommand(insertar, conectar);
+                    cmd.ExecuteNonQuery();
+                    if (conectar.State == ConnectionState.Open)
+                    {
+                        MessageBox.Show("Registro guardado con EXITO");
+                    }
                 }
             }
             catch (Exception ec)
@@ -198,9 +213,31 @@ namespace WindowsFormsApp1
         {
 
         }
-        private void buscar_Click(object sender, EventArgs e)
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            string consulta = "select * from ExistAlmacen where codigo = '" + textBox3.Text + "'";
+            VerReporte reportAlm = new VerReporte();
+            //this.Close();
+            reportAlm.ShowDialog();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo numero");
+            }
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            string consulta = "select * from ExistAlmacen where codigo = '" + textBox5.Text + "'";
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conectar);
             DataTable dt = new DataTable();
             adaptador.Fill(dt);
@@ -210,13 +247,6 @@ namespace WindowsFormsApp1
             dataGridView2.Columns[1].HeaderText = "CODIGO";
             dataGridView2.Columns[2].HeaderText = "CANTIDAD";
             dataGridView2.Columns[3].HeaderText = "DETALLES";
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            VerReporte reportAlm = new VerReporte();
-            //this.Close();
-            reportAlm.ShowDialog();
         }
     }
 }
