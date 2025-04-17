@@ -49,6 +49,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -235,7 +236,7 @@
             this.groupBox1.Controls.Add(this.lbnombre);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.btnDar);
-            this.groupBox1.Location = new System.Drawing.Point(409, 104);
+            this.groupBox1.Location = new System.Drawing.Point(408, 101);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(204, 220);
             this.groupBox1.TabIndex = 27;
@@ -263,12 +264,23 @@
             this.label7.Size = new System.Drawing.Size(0, 16);
             this.label7.TabIndex = 29;
             // 
+            // button3
+            // 
+            this.button3.Image = global::WindowsFormsApp1.Properties.Resources.CT;
+            this.button3.Location = new System.Drawing.Point(365, 66);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(36, 31);
+            this.button3.TabIndex = 33;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Despachar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(616, 338);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
@@ -311,5 +323,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button3;
     }
 }

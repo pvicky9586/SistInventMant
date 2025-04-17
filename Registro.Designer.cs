@@ -43,14 +43,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,42 +198,6 @@
             this.label8.Text = ",,,";
             this.label8.Visible = false;
             // 
-            // btnBorrar
-            // 
-            this.btnBorrar.AutoEllipsis = true;
-            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnBorrar.Image = global::WindowsFormsApp1.Properties.Resources.delet;
-            this.btnBorrar.Location = new System.Drawing.Point(4, 301);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 40);
-            this.btnBorrar.TabIndex = 19;
-            this.btnBorrar.Text = "BORRAR";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClear.Image = global::WindowsFormsApp1.Properties.Resources.clear1;
-            this.btnClear.Location = new System.Drawing.Point(85, 303);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 38);
-            this.btnClear.TabIndex = 12;
-            this.btnClear.Text = "Limpiar form.";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.Image = global::WindowsFormsApp1.Properties.Resources.searh3;
-            this.btnbuscar.Location = new System.Drawing.Point(471, 42);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(44, 37);
-            this.btnbuscar.TabIndex = 27;
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
-            // 
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -262,17 +227,6 @@
             this.label14.TabIndex = 29;
             this.label14.Text = "buscar por";
             // 
-            // button2
-            // 
-            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.impress1;
-            this.button2.Location = new System.Drawing.Point(490, 310);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 35);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Ver Reporte";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -284,10 +238,68 @@
             this.label15.TabIndex = 31;
             this.label15.Text = "Este valor no puede ser modicado";
             // 
+            // button3
+            // 
+            this.button3.Image = global::WindowsFormsApp1.Properties.Resources.CT;
+            this.button3.Location = new System.Drawing.Point(577, 268);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(36, 31);
+            this.button3.TabIndex = 32;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.impress1;
+            this.button2.Location = new System.Drawing.Point(490, 310);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 35);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Ver Reporte";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.Image = global::WindowsFormsApp1.Properties.Resources.searh3;
+            this.btnbuscar.Location = new System.Drawing.Point(471, 42);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(44, 37);
+            this.btnbuscar.TabIndex = 27;
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.AutoEllipsis = true;
+            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBorrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBorrar.Image = global::WindowsFormsApp1.Properties.Resources.delet;
+            this.btnBorrar.Location = new System.Drawing.Point(4, 301);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(75, 40);
+            this.btnBorrar.TabIndex = 19;
+            this.btnBorrar.Text = "BORRAR";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.Image = global::WindowsFormsApp1.Properties.Resources.clear1;
+            this.btnClear.Location = new System.Drawing.Point(85, 303);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 38);
+            this.btnClear.TabIndex = 12;
+            this.btnClear.Text = "Limpiar form.";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // Registro
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(610, 349);
+            this.ClientSize = new System.Drawing.Size(656, 349);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label14);
@@ -357,5 +369,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button3;
     }
 }

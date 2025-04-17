@@ -133,6 +133,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CT {
+            get {
+                object obj = ResourceManager.GetObject("CT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delet {
             get {
                 object obj = ResourceManager.GetObject("delet", resourceCulture);
@@ -236,6 +246,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap solicitar1 {
             get {
                 object obj = ResourceManager.GetObject("solicitar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UPDATE {
+            get {
+                object obj = ResourceManager.GetObject("UPDATE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

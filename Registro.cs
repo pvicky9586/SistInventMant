@@ -65,7 +65,9 @@ namespace WindowsFormsApp1
             textBox3.Text = ""; //cantidad
             textBox4.Text = ""; // descripcion
             label8.Text = ""; //id oculto debajo de DataGridView
+            textBox5.Text = ""; // budcar
             btnNuevo.Enabled = true;
+            llena_tabla();
 
         }
 
@@ -247,6 +249,12 @@ namespace WindowsFormsApp1
             dataGridView2.Columns[1].HeaderText = "CODIGO";
             dataGridView2.Columns[2].HeaderText = "CANTIDAD";
             dataGridView2.Columns[3].HeaderText = "DETALLES";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            llena_tabla();
+            limpiar();
         }
     }
 }

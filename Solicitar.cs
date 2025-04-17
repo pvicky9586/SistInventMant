@@ -119,12 +119,21 @@ namespace WindowsFormsApp1
 
         public void limpiar()
         {
-            lbnombre.Text = ""; // nombre
+            lbnombre.Text = "nada seleccionado"; // nombre
             label6.Text = ""; //descripcion
             label9.Text = ""; //cantidad disponible
             label11.Text = ""; // id
             textBox1.Text = ""; // cantidad a solicitar
+            textBox3.Text = ""; //buscar
+            label3.Text = "";  // codigo
 
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            llena_tabla();
+            limpiar();
         }
     }
 }
